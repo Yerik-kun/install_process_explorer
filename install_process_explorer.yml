@@ -1,15 +1,11 @@
 - name: Установка Process Explorer на Windows
-
   hosts: windows
-
   tasks:
-
     - name: Скачивание установщика
-      win_get_url:
+      ansible.windows.win_get_url: # Изменено здесь
         url: "https://download.sysinternals.com/files/ProcessExplorer.zip"
         dest: "C:\\Temp\\ProcessExplorer.zip"
-
     - name: Распаковка архива
-      win_unzip:
+      ansible.windows.win_unzip: # Изменено здесь
         src: "C:\\Temp\\ProcessExplorer.zip"
         dest: "C:\\Temp"
