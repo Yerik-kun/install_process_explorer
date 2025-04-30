@@ -1,3 +1,5 @@
 collections:
   - name: ansible.windows
     version: 1.13.0
+  - name: community.windows
+    version: latest  # Или укажи конкретную версию
